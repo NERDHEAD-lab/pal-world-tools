@@ -17,6 +17,7 @@
 	<modules>
 		<module>pal-world-tools-core</module>
 		<module>pal-world-tools-utils</module>
+		<module>pal-world-config-gui</module>
 	</modules>
 	<properties>
 		<java.version>21</java.version>
