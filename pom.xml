@@ -6,10 +6,17 @@
 	<artifactId>pal-world-tools</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>PalWorldTools</name>
-	<description>PalWorldTools</description>
+	<name>pal-world-tools</name>
+	<description>pal-world-tools</description>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.2</version>
+	</parent>
+
 	<modules>
 		<module>pal-world-tools-core</module>
+		<module>pal-world-tools-utils</module>
 	</modules>
 	<properties>
 		<java.version>21</java.version>
@@ -17,11 +24,6 @@
 	</properties>
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-parent</artifactId>
-				<version>3.2.2</version>
-			</dependency>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
