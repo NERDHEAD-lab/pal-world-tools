@@ -2,6 +2,7 @@ package kr.nerdlab.palworld.sav;
 
 import jakarta.annotation.Nonnull;
 import kr.nerdlab.palworld.entity.GvasObject;
+import kr.nerdlab.palworld.entity.SaveType;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -31,32 +32,6 @@ import java.util.zip.Inflater;
  */
 
 public class UnrealEngineSaveFileUtils {
-
-
-	public enum SaveType {
-		SINGLE_ZLIB(0x31), //49
-		DOUBLE_ZLIB(0x32); //50
-
-		private final byte value;
-
-		SaveType(int value) {
-			this.value = (byte) value;
-		}
-
-		public byte getValue() {
-			return value;
-		}
-
-		public static SaveType fromValue(byte value) {
-			for (SaveType type : SaveType.values()) {
-				if (type.getValue() == value) {
-					return type;
-				}
-			}
-			return null;
-		}
-	}
-
 	/**
 	 * Decompresses a *.sav file to a GvasObject.
 	 *
